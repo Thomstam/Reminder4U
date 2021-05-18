@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <View
+        android:id="@+id/recycler_view_solid_color"
+        android:layout_width="24dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/grayLine"
+        android:background="@drawable/round_corners" />
+
+    <TextView
+        android:id="@+id/recycler_view_preview_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/halfStandardMargin"
+        android:layout_marginTop="@dimen/halfStandardMargin"
+        android:layout_toEndOf="@id/recycler_view_solid_color"
+        android:text="@string/recycler_view_preview_text"
+        android:textSize="@dimen/headerTextSize"
+        tools:ignore="RelativeOverlap" />
+
+    <ImageView
+        android:id="@+id/recycler_view_reminder_bitmap"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_below="@id/recycler_view_preview_text"
+        android:layout_marginStart="@dimen/halfStandardMargin"
+        android:layout_marginTop="@dimen/halfStandardMargin"
+        android:layout_marginBottom="@dimen/standardMargin"
+        android:layout_toEndOf="@id/recycler_view_solid_color"
+        android:contentDescription="@string/reminderPhoto"
+        android:src="@drawable/recycler_view_bitmap_preview" />
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_below="@+id/recycler_view_preview_text"
+        android:layout_marginStart="@dimen/standardMargin"
+        android:layout_marginTop="@dimen/halfStandardMargin"
+        android:layout_toEndOf="@id/recycler_view_reminder_bitmap"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/halfStandardMargin"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            tools:ignore="UseCompoundDrawables">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/recycler_view_clock_icon"
+                android:src="@drawable/recycler_view_clock_icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/halfStandardMargin"
+                android:text="@string/recycler_view_time_preview"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/halfStandardMargin"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            tools:ignore="UseCompoundDrawables">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/recycler_view_clock_icon"
+                android:src="@drawable/recycler_view_calendar_icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/halfStandardMargin"
+                android:text="@string/recycler_view_time_preview"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/recycler_view_favorites_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="13.5dp"
+        android:layout_marginEnd="@dimen/halfStandardMargin"
+        android:contentDescription="@string/recycler_view_favorites_icon"
+        android:src="@drawable/recycler_view_favorites_false_icon" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="13.5dp"
+        android:layout_marginEnd="@dimen/halfStandardMargin"
+        android:layout_toStartOf="@id/recycler_view_favorites_button"
+        android:contentDescription="@string/recycler_view_edit_icon"
+        android:src="@drawable/recycler_view_edit_icon" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/recycler_view_favorites_button"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="21.5dp"
+        android:layout_marginEnd="@dimen/standardMargin"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        tools:ignore="UseCompoundDrawables">
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/vehicleOption"
+            android:src="@drawable/recycler_view_car_icon" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/recycler_view_direction_time_preview"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+
+    <View
+        android:id="@+id/grayLine"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_below="@+id/recycler_view_reminder_bitmap"
+        android:layout_marginStart="@dimen/standardMargin"
+        android:layout_marginEnd="@dimen/standardMargin"
+        android:background="@android:color/darker_gray" />
+
+</RelativeLayout>

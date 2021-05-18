@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Reminder4U</string>
+    <string name="photoLady">photoLady</string>
+
+    <string name="drawer.open">open</string>
+    <string name="drawer.close">close</string>
+
+    <string name="drawer_welcome_text">Hello,\nI hope you\'re\nhaving a\nwonderful day!</string>
+    <string name="today">Today</string>
+    <string name="upcoming">Upcoming</string>
+    <string name="overdue">Overdue</string>
+    <string name="recycler_view_preview_text">Jake\'s Birthday</string>
+    <string name="reminderPhoto">ReminderPhoto</string>
+    <string name="recycler_view_clock_icon">clockIcon</string>
+    <string name="recycler_view_time_preview">08:00 AM</string>
+    <string name="recycler_view_favorites_icon">favoritesIcon</string>
+    <string name="recycler_view_edit_icon">editIcon</string>
+    <string name="vehicleOption">vehicleOption</string>
+    <string name="recycler_view_direction_time_preview">15 min</string>
+</resources>

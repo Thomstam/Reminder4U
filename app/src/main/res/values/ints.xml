@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="standardTextSize">14sp</dimen>
+    <dimen name="headerTextSize">18sp</dimen>
+
+
+    <dimen name="standardMargin">16dp</dimen>
+    <dimen name="halfStandardMargin">8dp</dimen>
+</resources>
