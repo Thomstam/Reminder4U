@@ -17,4 +17,22 @@
     <string name="recycler_view_edit_icon">editIcon</string>
     <string name="vehicleOption">vehicleOption</string>
     <string name="recycler_view_direction_time_preview">15 min</string>
+    <string name="addReminderButton">addReminderButton</string>
+    <string name="what_do_you_have_to_do">What do you have to do?</string>
+    <string name="notes">Notes</string>
+    <string name="image">Image</string>
+    <string name="due_date">Due Date</string>
+    <string name="due_time">Due Time</string>
+    <string name="notification">Notification</string>
+    <string name="location_assistant">Location Assistant</string>
+    <string name="carTransportation">carTransportation</string>
+    <string name="googleMapsIcon">googleMapsIcon</string>
+    <string name="estimated_time">Estimated time:</string>
+    <string name="google_time_preview">15 minutes</string>
+    <string name="categorize">Categorize</string>
+    <string name="cancel_icon">cancel_icon</string>
+    <string name="complete_icon">complete_icon</string>
+    <string name="repeat">Repeat</string>
+    <string name="walkingTransport">walkingTransport</string>
+
 </resources>

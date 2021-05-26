@@ -9,6 +9,9 @@
     <color name="white">#FFFFFFFF</color>
 
     <color name="basic">#757272</color>
-    <color name="background">#E5E5E5</color>
-    <color name="test">#DEDEDE</color>
+    <color name="background">#4A4A4A</color>
+    <color name="formGrey">#4A4A4A</color>
+    <color name="form_setup_grey">#88DEDEDE</color>
+    <color name="statusBar">#3B3B3B</color>
+    <color name="red">#DF0C0C</color>
 </resources>

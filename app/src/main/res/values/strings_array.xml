@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="notification_list">
+        <item>5 minutes early</item>
+        <item>30 minutes early</item>
+        <item>1 hour early</item>
+        <item>6 hours early</item>
+    </string-array>
+
+    <string-array name="repeat_list">
+        <item>Never</item>
+        <item>Every 12 hours</item>
+        <item>Every Day</item>
+        <item>Every Week</item>
+        <item>Every Month</item>
+        <item>Every Year</item>
+    </string-array>
+
+</resources>

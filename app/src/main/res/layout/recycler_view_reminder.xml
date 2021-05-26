@@ -19,7 +19,7 @@
         android:layout_marginTop="@dimen/halfStandardMargin"
         android:layout_toEndOf="@id/recycler_view_solid_color"
         android:text="@string/recycler_view_preview_text"
-        android:textSize="@dimen/headerTextSize"
+        android:textSize="@dimen/textSize18"
         tools:ignore="RelativeOverlap" />
 
     <ImageView
@@ -146,5 +146,11 @@
         android:layout_marginStart="@dimen/standardMargin"
         android:layout_marginEnd="@dimen/standardMargin"
         android:background="@android:color/darker_gray" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+    </androidx.cardview.widget.CardView>
 
 </RelativeLayout>

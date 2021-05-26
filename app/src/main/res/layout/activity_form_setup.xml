@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:fitsSystemWindows="true"
+    tools:context=".FormSetup">
+
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/form_setup_app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="0dp">
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/basic"
+            app:layout_scrollFlags="scroll|enterAlways">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_scrollFlags="scroll|enterAlways|enterAlwaysCollapsed">
+
+                <ImageView
+                    android:id="@+id/form_setup_cancel_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/cancel_icon"
+                    android:src="@drawable/form_setup_cancel_icon" />
+
+                <ImageView
+                    android:id="@+id/form_setup_complete_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="@dimen/standardMargin"
+                    android:contentDescription="@string/complete_icon"
+                    android:src="@drawable/form_setup_complete_icon" />
+
+            </RelativeLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/form_setup_app_bar"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/standardMargin">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/what_do_you_have_to_do"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textSize18" />
+
+            <EditText
+                android:id="@+id/form_setup_reminder_name"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="@dimen/halfStandardMargin"
+                android:autofillHints="none"
+                android:background="@drawable/form_setup_edittext_round_corners"
+                android:foreground="@drawable/form_setup_edittext_bottom_line"
+                android:inputType="text"
+                android:paddingStart="@dimen/standardMargin"
+                android:paddingEnd="@dimen/standardMargin"
+                tools:ignore="LabelFor" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/standardMargin"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/form_setup_notes_button"
+                    android:layout_width="0dp"
+                    android:layout_height="24dp"
+                    android:layout_marginEnd="4dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/form_setup_edittext_round_corners"
+                    android:text="@string/notes" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/form_setup_image_button"
+                    android:layout_width="0dp"
+                    android:layout_height="24dp"
+                    android:layout_marginStart="4dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/form_setup_edittext_round_corners"
+                    android:text="@string/image" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/due_date"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textSize18" />
+
+            <CalendarView
+                android:id="@+id/form_setup_due_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="@dimen/halfStandardMargin"
+                android:layout_marginEnd="24dp"
+                android:background="@drawable/form_setup_edittext_round_corners"
+                android:dateTextAppearance="@style/CalenderViewDateCustomText"
+                android:weekDayTextAppearance="@style/CalenderViewDateCustomText" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/due_time"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textSize18" />
+
+            <TimePicker
+                android:id="@+id/form_setup_due_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:timePickerMode="spinner" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/standardMargin"
+                android:text="@string/notification"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textSize18" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/halfStandardMargin"
+                android:background="@drawable/form_setup_edittext_round_corners">
+
+                <Spinner
+                    android:id="@+id/form_setup_notification_spinner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:dropDownSelector="@color/basic"
+                    android:spinnerMode="dropdown" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/standardMargin"
+                android:text="@string/repeat"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textSize18" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/halfStandardMargin"
+                android:background="@drawable/form_setup_edittext_round_corners">
+
+                <Spinner
+                    android:id="@+id/form_setup_repeat_spinner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:spinnerMode="dropdown" />
+            </RelativeLayout>
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/standardMargin"
+                android:checked="true"
+                android:text="@string/location_assistant"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textSize18"
+                app:thumbTint="@color/white"
+                app:trackTint="@color/basic"
+                app:trackTintMode="multiply" />
+
+            <RadioGroup
+                android:id="@+id/form_setup_transport_radio_group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/halfStandardMargin"
+                android:orientation="horizontal"
+                android:visibility="visible">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <RadioButton
+                        android:id="@+id/form_setup_car_radio_button"
+                        android:layout_width="30dp"
+                        android:layout_height="wrap_content"
+                        android:checked="true" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="@string/carTransportation"
+                        android:src="@drawable/form_setup_car_icon" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <RadioButton
+                        android:id="@+id/form_setup_walk_radio_button"
+                        android:layout_width="30dp"
+                        android:layout_height="wrap_content" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="@string/walkingTransport"
+                        android:src="@drawable/form_setup_walking_directions" />
+
+                </LinearLayout>
+
+            </RadioGroup>
+
+            <ImageView
+                android:id="@+id/form_setup_google_maps"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/standardMargin"
+                android:contentDescription="@string/googleMapsIcon"
+                android:src="@drawable/form_setup_google_maps_icon" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/halfStandardMargin"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:alpha="0.7"
+                    android:text="@string/estimated_time"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/testSize14" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:alpha="0.7"
+                    android:text="@string/google_time_preview"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/testSize14" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/standardMargin"
+                android:text="@string/categorize"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textSize18" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/standardMargin"
+                android:background="@drawable/form_setup_edittext_round_corners">
+
+                <Spinner
+                    android:id="@+id/form_setup_categories_spinner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:spinnerMode="dropdown" />
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
